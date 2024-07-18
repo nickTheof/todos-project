@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { createUserTodo } from "../utils/api";
 import { LogContext } from "../store/LogContext";
 import Error from "./Error";
@@ -21,6 +21,17 @@ export default function CreateTodo({ onAdd }) {
   function handleChange(event) {
     setTitle(event.target.value);
   }
+
+  useEffect(() => {
+    if (error) {
+      const timer = setTimeout(() => {
+        setError(null);
+      }, 2000);
+
+      // Cleanup function to clear the timer if the component unmounts or error changes before 2 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [error]);
 
   return (
     <>
