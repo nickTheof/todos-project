@@ -14,7 +14,7 @@ This project demonstrates a microservices architecture with frontend, backend, a
 
 3. **PostgreSQL (Database)**
    - Runs the PostgreSQL database.
-   - Accessible at `localhost:5432`.
+   - Accessible at `http://localhost:5432`.
 
 4. **pgAdmin**
    - Database management tool for PostgreSQL.
@@ -84,4 +84,4 @@ This project demonstrates a microservices architecture with frontend, backend, a
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/nickTheof/jobs-dashboard-project/blob/main/licence.txt) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/nickTheof/todos-projects/blob/main/licence.txt) file for details.
